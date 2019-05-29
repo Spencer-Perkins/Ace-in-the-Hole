@@ -1,0 +1,1 @@
+<p>Copyright &copy; <?php echo date("Y"); ?> <br> Ace in the Hole Multisport Events</p>

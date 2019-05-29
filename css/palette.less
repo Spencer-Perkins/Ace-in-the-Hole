@@ -1,0 +1,26 @@
+// out: null
+
+/* Color palette provided by client */
+
+@color1: #FF0000;
+
+/* Colors 20% darker than original */
+@darkColor1: darken(@color1, 10%);
+@darkColor2: darken(@color1, 25%);
+
+/* Colors 20% lighter than original */
+@lightColor1: lighten(@color1, 20%);
+
+/* Desaturated colors */
+@greyColor1: desaturate(@color1, 100%);
+
+/* Black and white */
+@lightColor: #FFFFFF;
+@darkColor: #000000;
+
+/* Greys */
+@darkGrey: #404040;
+@midGrey: #808080;
+@lightGrey: #E0E0E0;
+@lightestGrey: #F5F5F5;
+
