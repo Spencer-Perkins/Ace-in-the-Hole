@@ -2,138 +2,175 @@
 @import 'mixins.less';
 
 body {
-  	font-family: 'PT Sans', sans-serif;
-  	font-size: 14px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
 	margin: 0;
 }
+
 /* Header */
 header {
-  	background-color: @color1;
-  	padding: 3em 0;
-  	h1, h2 {
-    	line-height: .5em;
-    	text-align: center;
-  	}
-  	h1 {
-    	font-family: 'Poiret One', cursive;
-    	color: @lightColor;
-    	font-size: 2.8em;
-    	font-weight: bold;
-    	padding-bottom: .6em;
-  	}
-  	h2 {
-    	font-family: 'PT Sans', sans-serif;
-    	font-size: 1.4em;
-    	font-style:italic;
-    	font-weight: bold;
-    	color: @darkColor;
-    	text-transform: lowercase;
-    	letter-spacing: .1em;
+	background-color: @color1;
+	padding: 3em 0;
+
+	h1,
+	h2 {
+		line-height: .5em;
+		text-align: center;
+	}
+
+	h1 {
+		font-family: 'Poiret One', cursive;
+		color: @lightColor;
+		font-size: 2.8em;
+		font-weight: bold;
+		padding-bottom: .6em;
+	}
+
+	h2 {
+		font-family: 'PT Sans', sans-serif;
+		font-size: 1.4em;
+		font-style: italic;
+		font-weight: bold;
+		color: @darkColor;
+		text-transform: lowercase;
+		letter-spacing: .1em;
 		word-spacing: .1em;
-  	}
+	}
 }
+
 /* Nav */
 nav {
-  background: @darkColor;
+	background: @darkColor;
 
-  /* Hamburger menu. Z-index must be larger than in #navlinks for the script to work properly. */
-  .hamburger, .cross {
-    background-color: @darkColor;
-    color: @lightColor;
-    font-weight: bold;
-    font-size: 1.9em;
-    padding-left: .5em;
-    border: none;
-    outline: none;
-    z-index:10000000000000;
-  }
-  .cross {
-    padding-top: .2em;
-  }
-  /* Nav link text inside the hamburger menu */
-  section {
-    z-index:1000000;
-    font-size: 1.3em;
-    width: 100%;
-    text-align: center;
-    ul {
-      list-style-type: none;
-      background-color: @darkColor;
-    }
-    li {
-      a {
-        text-decoration: none;
-        color: @lightColor;
-        padding: .6em 0;
-        display: block;
-        &:hover {
-          background-color: @lightColor;
-          color: @darkColor;
-        }
-      }
-    }
-  }
+	/* Hamburger menu. Z-index must be larger than in #navlinks for the script to work properly.*/
+	.hamburger,
+	.cross {
+		background-color: @darkColor;
+		color: @lightColor;
+		font-weight: bold;
+		font-size: 1.9em;
+		padding-left: .5em;
+		border: none;
+		outline: none;
+		z-index: 10000000000000;
+	}
+
+	.cross {
+		padding-top: .2em;
+	}
+
+	/* Nav link text inside the hamburger menu */
+	section {
+		z-index: 1000000;
+		font-size: 1.3em;
+		width: 100%;
+		text-align: center;
+
+		ul {
+			list-style-type: none;
+			background-color: @darkColor;
+		}
+
+		li {
+			a {
+				text-decoration: none;
+				color: @lightColor;
+				padding: .6em 0;
+				display: block;
+
+				&:hover {
+					background-color: @lightColor;
+					color: @darkColor;
+				}
+			}
+		}
+	}
 }
+
 /* Main */
 main {
 	b {
 		font-weight: bold;
 	}
-  	section {
-    	padding: 1em 0;
-    	line-height: 1.5em;
-  	}
-  	#galleryRow1, #galleryRow2, #galleryTitle{
-    	display: none;
-  	}
+
+	section {
+		padding: 1em 0;
+		line-height: 1.5em;
+	}
+
+	/* Hides image gallery in tablet view */
+	#galleryTitle,
+	#container {
+		display: none;
+	}
+
 	/* Hero images */
-	.eventHero, .faqHero, .homeHero {
+	.eventHero,
+	.faqHero {
 		height: 7em;
 	}
+
 	/* Text placed over hero image */
-	.eventHeroText, .faqHeroText, .homeHeroText {
+	.eventHeroText,
+	.faqHeroText {
 		font-family: 'Playfair Display', serif;
 		font-size: 2em;
 		color: @color1;
 		line-height: 1.2em;
 		text-align: center;
 	}
-	h2, h3, h4 {
+
+	/* Hides hero image in tablet view */
+	.homeHero {
+		display: none;
+	}
+
+	h2,
+	h3,
+	h4 {
 		color: @color1;
 		font-family: 'Playfair Display', serif;
-    	font-weight: bold;
+		font-weight: bold;
 	}
+
 	h2 {
 		font-size: 2em;
 		padding: .8em;
 		text-align: center;
 		margin: 0;
 	}
-  	h3 {
-    	font-size: 1.5em;
+
+	h3 {
+		font-size: 1.5em;
 		padding: .6em .5em;
 		width: 100%;
 		background-color: @color1;
 		color: @lightColor;
 	}
-    h4 {
-      color: @color1;
-      font-size: 1.2em;
-      font-family: 'Playfair Display', serif;
-      font-weight: bold;
-      padding: 0 0 .5em 1em;
-    }
-    p {
-      padding: .3em 1em 1em 1em;
-    }
-  	}
+
+	h4 {
+		color: @color1;
+		font-size: 1.2em;
+		font-family: 'Playfair Display', serif;
+		font-weight: bold;
+		padding: 0 0 .5em 1em;
+	}
+
+	p {
+		padding: .3em 1em 1em 1em;
+	}
+
 	/* Forms */
-   #inquiryForm, .successP {
-      background-color: @lightestGrey;
-	  padding: 1em;
-	  border-radius: 4px;
-  	}
-	input, select, textarea {
+	#inquiryForm,
+	.successP {
+		background-color: @lightestGrey;
+		padding: 1em;
+		border-radius: 4px;
+	}
+
+	input,
+	select,
+	textarea {
 		width: 100%;
 		box-sizing: border-box;
 		padding: .4em;
@@ -141,27 +178,35 @@ main {
 		border: 1px solid @lightGrey;
 		border-radius: 4px;
 	}
+
 	select {
 		background-color: @lightColor;
 		padding: .4em 0;
 		cursor: pointer;
 	}
-	label, .successP {
+
+	label,
+	.successP {
 		display: inline-block;
 	}
+
 	#mySubmit {
 		background-color: @color1;
 		color: @lightColor;
 		border: none;
 		font-size: .9em;
+
 		&:active {
-        	position: relative;
-        	top: 2px;
+			position: relative;
+			top: 2px;
 		}
 	}
+	
+	/* FAQ page */
 	table {
 		width: 100%;
 	}
+
 	th {
 		text-align: left;
 		font-size: 1.2em;
@@ -170,104 +215,130 @@ main {
 		background-color: @lightestGrey;
 		color: @color1;
 	}
-	
+
 	td {
 		padding: 1em 1em 1em .7em;
 	}
+
 	tr {
-		&:nth-child(odd){
+		&:nth-child(odd) {
 			background-color: @lightestGrey;
 		}
 	}
-	#satEvents, #sunEvents, #costIncl1, #costIncl2, #weather, #courseDetails, #about {
+
+	#satEvents,
+	#sunEvents,
+	#costIncl1,
+	#costIncl2,
+	#weather,
+	#courseDetails,
+	#about {
 		padding: 0 0 1em 0;
-		li, p {
+
+		li,
+		p {
 			padding: .2em .7em;
 		}
 	}
-	#courseDetails, #socialmedia1, #socialmedia2 {
+
+	#courseDetails,
+	#socialmedia1,
+	#socialmedia2 {
 		h4 {
 			color: @color1;
-      		font-size: 1.3em;
-      		font-family: 'Playfair Display', serif;
-      		font-weight: bold;
-      		padding: .5em;
+			font-size: 1.3em;
+			font-family: 'Playfair Display', serif;
+			font-weight: bold;
+			padding: .5em;
 			background-color: @lightestGrey;
 		}
+
 		p {
 			padding-bottom: 1em;
 		}
 	}
+
 	#costIncl1 {
 		padding-bottom: 0;
 	}
+
 	#costIncl2 {
 		padding-top: 0;
-		}
+	}
+
 	#faq {
 		padding: 0;
 	}
+
 	#about {
 		p {
 			padding: .7em .7em .6em .7em;
 		}
 	}
-	#socialmedia1, #socialmedia2 {
+
+	#socialmedia1,
+	#socialmedia2 {
 		padding-top: 0;
 		padding-bottom: 0;
 		overflow: hidden;
 	}
+
 	dt {
-    	cursor: pointer;
-    	font-size: 1.2em;
+		cursor: pointer;
+		font-size: 1.2em;
 		background-color: @color1;
 		color: @lightColor;
 		padding: .5em .7em;
+
 		/* arrow icon left */
 		&:before {
 			border: 0.5em solid;
-    		border-color: transparent transparent transparent @lightColor;
-    		content: '';
-    		display: inline-block;
-    		height: 0;
-    		vertical-align: middle;
-    		width: 0;
+			border-color: transparent transparent transparent @lightColor;
+			content: '';
+			display: inline-block;
+			height: 0;
+			vertical-align: middle;
+			width: 0;
 			margin-right: .5em;
 		}
-	
+
 	}
+
 	/* arrow icon down */
 	.open {
 		border-color: @lightColor transparent transparent transparent;
-    	border-bottom-width: 0;
+		border-bottom-width: 0;
+
 		&:before {
 			border-color: @lightColor transparent transparent transparent;
-    		border-bottom-width: 0;
+			border-bottom-width: 0;
 		}
-	} 
+	}
+
 	dd {
 		background-color: @lightestGrey;
 		color: @darkColor;
 		padding: 1em;
 	}
-
+}
 
 /* Footer */
 footer {
-  background-color: @darkColor;
-  color: @lightColor;
-  font-size: .8em;
-  clear: all;
-  padding: .5em 0 .5em 0;
+	background-color: @darkColor;
+	color: @lightColor;
+	font-size: .8em;
+	clear: all;
+	padding: .5em 0 .5em 0;
 	margin: auto;
 	/* Flex keeps footer at bottom of page */
-  display: flex;
-  p {
-    line-height: 1.4em;
-    text-align: center;
-	width: 100%;
-	margin: 0;
-  }
+	display: flex;
+
+	p {
+		line-height: 1.4em;
+		text-align: center;
+		width: 100%;
+		margin: 0;
+	}
 }
 
 /*
@@ -280,118 +351,180 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
 
 @media only screen and (min-width: 481px) {
 
-  /* Header */
-  header {
-    padding: 3.5em;
-    text-align: center;
-    h1, h2 {
-      display: inline;
-      padding: 0;
-    }
-    h1 {
-      font-size: 3.2em;
-      padding-right: .2em;
-    }
-    h2 {
-      font-size: 1.8em;
-    }
-  }
-  /* Nav */
-  nav {
-    .hamburger, .cross {
-      font-size: 2.3em;
-    }
-    #navlinks {
-      font-size: 1.6em;
-    }
-  }
-  /* Main */
-  main {
-	  .eventHero, .faqHero, .homeHero {
-		height: 150px;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	  .eventHeroText, .faqHeroText, .homeHeroText {
-		  font-size: 2.5em;
-		  .dropShadow(@lightColor, @darkColor);
-		/* 'Position, top, and transform' center the text on the image. Don't change these settings. */
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%); 
-	  }
-	  .eventHero {
-		/* Image has been made opaque; full strength image is also in the image folder */
-		background-image: url(../images/eventshero.png);
-		background-position: 50% 50%;
-	  }
-	  .faqHero {
-		/* Image has been made opaque; full strength image is also in the image folder */
-		background-image: url(../images/faqhero.png);
-		background-position: 50% 90%;
-	  }
-	  .homeHero {
-		/* Image has been made opaque; full strength image is also in the image folder */
-		background-image: url(../images/homehero.png);
-		background-position: 50% 50%;  
-	  }
-    section {
-      padding: 1.2em;
-    }
-    h3 {
-      font-size: 1.6em;
-    }
-    h4 {
-      font-size: 1.3em;
-    }
-    #galleryRow1, #galleryRow2, #galleryTitle {
-      display: flex;
-      img {
-        padding: .2em .5em;
-      }
-    }
-	  #galleryRow1 {
-		  padding: .5em;
-	  }
-	  #galleryRow2 {
-		  padding: .2em .5em;
-	  }
-	  #galleryTitle {
-		  padding: 0;
+	/* Header */
+	header {
+		padding: 3.5em;
+		text-align: center;
 
-	  }
-	  #satEvents {
-		  padding-bottom: 0em;
-		  table {
-		  &:first-of-type{
-			border-right: 1px solid @lightGrey;
-		  }
+		h1,
+		h2 {
+			display: inline;
+			padding: 0;
 		}
-	  }
-	  #costIncl1 {
-		  li {
-			  padding-top: .6em;
-		  }
-	  }
-	  #costIncl2 {
-		  h3 {
-			  padding: 1.08em;
-		  }
-		  li {
-			  padding-top: .6em;
-		  }
-	  }
-	  #socialmedia1, #socialmedia2 {
-		  padding: 0;
-		  text-align: center;
-	  }
-	  #socialmedia1 {
-		  float: left;
-	  }
-	  #socialmedia2 {
-		  float: right;
-	  }
-  }
+
+		h1 {
+			font-size: 3.2em;
+			padding-right: .2em;
+		}
+
+		h2 {
+			font-size: 1.8em;
+		}
+	}
+
+	/* Nav */
+	nav {
+
+		.hamburger,
+		.cross {
+			font-size: 2.3em;
+		}
+
+		#navlinks {
+			font-size: 1.6em;
+		}
+	}
+
+	/* Main */
+	main {
+		
+		/* Hero images */
+		.eventHero,
+		.faqHero,
+		.homeHero {
+			height: 150px;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		/* Hero text */
+		.eventHeroText,
+		.faqHeroText {
+			font-size: 2.5em;
+			.dropShadow(@lightColor, @darkColor);
+			/* 'Position, top, and transform' center the text on the image. Don't change these settings. */
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.eventHero {
+			/* Image has been made opaque; full strength image is also in the image folder */
+			background-image: url(../images/eventshero.png);
+			background-position: 50% 50%;
+		}
+
+		.faqHero {
+			/* Image has been made opaque; full strength image is also in the image folder */
+			background-image: url(../images/faqhero.png);
+			background-position: 50% 90%;
+		}
+
+		.homeHero {
+			/* Image has been made opaque; full strength image is also in the image folder */
+			background-image: url(../images/homehero.png);
+			background-position: 50% 50%;
+			display: flex;
+		}
+
+		section {
+			padding: 1.2em;
+		}
+
+		h3 {
+			font-size: 1.6em;
+		}
+
+		h4 {
+			font-size: 1.3em;
+		}
+
+		/* Image gallery */
+		#galleryTitle {
+			display: flex;
+			padding: 0;
+		}
+
+		#container {
+			display: flex;
+			height: 25em;
+			padding: 0;
+		}
+
+		.thumbnails {
+			display: flex;
+			flex-direction: column;
+			overflow: scroll;
+
+			li {
+				flex: auto;
+				padding: 0 .6em;
+			}
+
+			a {
+				display: block;
+				padding-bottom: 0;
+			}
+
+			img {
+				width: 40em;
+				height: auto;
+				overflow: scroll;
+			}
+		}
+
+		.slides {
+			overflow: hidden;
+			padding: 0;
+
+			li {
+				height: auto;
+				margin: 0;
+				z-index: 2;
+			}
+		}
+
+		#satEvents {
+			padding-bottom: 0em;
+
+			table {
+				&:first-of-type {
+					border-right: 1px solid @lightGrey;
+				}
+			}
+		}
+
+		#costIncl1 {
+			li {
+				padding-top: .6em;
+			}
+		}
+
+		#costIncl2 {
+			h3 {
+				padding: 1.08em;
+			}
+
+			li {
+				padding-top: .6em;
+			}
+		}
+
+		#socialmedia1,
+		#socialmedia2 {
+			padding: 0;
+			text-align: center;
+		}
+
+		#socialmedia1 {
+			float: left;
+		}
+
+		#socialmedia2 {
+			float: right;
+		}
+	}
+
 	footer {
 		clear: both;
 	}
@@ -407,117 +540,159 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
 
 @media only screen and (min-width: 1025px) {
 
-  /* Header */
-  header {
-    padding: 5em;
-    h1 {
-      font-size: 3.7em;
-    }
-    h2 {
-      font-size: 2.3em;
-    }
-  }
+	/* Header */
+	header {
+		padding: 5em;
 
-  /* Nav section styles the nav to change from hamburger to normal horizontal nav links */
-  nav {
-    section {
-      ul {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: @darkColor;
-      }
-      li {
-        float: left;
-        a {
-          display: block;
-          text-align: center;
-          padding: .5em .7em .5em .7em;
-          &:hover {
-            background-color: @lightColor;
-            color: @darkColor;
-          }
-        }
-      }
-    }
-  }
+		h1 {
+			font-size: 3.7em;
+		}
 
-  /* Removes hamburger menu for desktop view */
-  button {
-    display: none;
-  }
-  /* Main */
-  main {
-    section {
-      padding: 1.5em 2em 1.5em 1.2em;
-    }
-    #gallery {
-      padding: 2em;
-    }
-    h3 {
-      font-size: 1.7em;
-    }
-    h4 {
-      font-size: 1.4em;
-    }
-    p {
-      font-size: 1.1em;
-    }
-    #inquiryForm {
-		margin: 0 5em; 
-		padding: 1.5em 2.5em;
-		&:after {
-			 content: "";
-  			clear: both;
-  			display: table;
+		h2 {
+			font-size: 2.3em;
 		}
 	}
-	  .contact, .success {
-		padding: 0 0 2em 0;
-	  }
-	  .success {
-		text-align: center;
-		  p {
-			margin: auto;
-			text-align: left;
-		  }
-		}
-	label {
-		float: left;
-		width: 25%;
-	}
-	input, select, textarea {
-		float: left;
-		width: 75%;
-	}
-	#mySubmit {
-		width: 10%;
-		float: right;
-		margin-bottom: 0;
-	}
-	  #courseDetails, #about {
-		  h3 {
-			  padding-left: .6em;
-		  }
-		  h4 {
-			  padding: .5em 1em;
-		  }
-	  }
-	  #courseDetails {
-		  p {
-			  padding: 1em;
-		  }
-	  }
-	  #about {
-		  p {
-			  padding: .7em 1em;
-		  }
-	  }
-}
 
-  /* Footer */
-  footer {
-	clear: both;
-    font-size: 1em;
-  }
+	/* Nav section styles the nav to change from hamburger to normal horizontal nav links */
+	nav {
+		section {
+			ul {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: @darkColor;
+			}
+
+			li {
+				float: left;
+
+				a {
+					display: block;
+					text-align: center;
+					padding: .5em .7em .5em .7em;
+
+					&:hover {
+						background-color: @lightColor;
+						color: @darkColor;
+					}
+				}
+			}
+		}
+	}
+
+	/* Removes hamburger menu for desktop view */
+	button {
+		display: none;
+	}
+
+	/* Main */
+	main {
+		section {
+			padding: 1.5em 2em 1.5em 1.2em;
+		}
+
+		h3 {
+			font-size: 1.7em;
+		}
+
+		h4 {
+			font-size: 1.4em;
+		}
+
+		p {
+			font-size: 1.1em;
+		}
+
+		/* Forms */
+		#inquiryForm {
+			margin: 0 5em;
+			padding: 1.5em 2.5em;
+
+			&:after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+		}
+
+		.contact,
+		.success {
+			padding: 0 0 2em 0;
+		}
+
+		.success {
+			text-align: center;
+
+			p {
+				margin: auto;
+				text-align: left;
+			}
+		}
+
+		label {
+			float: left;
+			width: 25%;
+		}
+
+		input,
+		select,
+		textarea {
+			float: left;
+			width: 75%;
+		}
+
+		#mySubmit {
+			width: 10%;
+			float: right;
+			margin-bottom: 0;
+		}
+
+		#courseDetails,
+		#about {
+			h3 {
+				padding-left: .6em;
+			}
+
+			h4 {
+				padding: .5em 1em;
+			}
+		}
+
+		#courseDetails {
+			p {
+				padding: 1em;
+			}
+		}
+
+		#about {
+			p {
+				padding: .7em 1em;
+			}
+		}
+
+		/* Image gallery */
+		#container {
+			height: 38em;
+			margin-right: 0;
+		}
+
+		.slides {
+			li {
+				height: auto;
+			}
+		}
+
+		.thumbnails {
+			img {
+				width: 45em;
+				height: auto;
+			}
+		}
+	}
+
+	/* Footer */
+	footer {
+		clear: both;
+		font-size: 1em;
+	}
 }

@@ -1,11 +1,9 @@
 <?php
-try
-{
+try {
     $pdo = new PDO('mysql:host=localhost;dbname=spencerp_ace_db', 'spencerp_ace_user', 'Mypassword');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->exec('SET NAMES "utf8"');
-}
-catch (PDOException $e) {
+} catch (PDOException $e) {
     $error = 'Unable to connect to the database server.';
     include '../includes/error.html.php';
     exit();

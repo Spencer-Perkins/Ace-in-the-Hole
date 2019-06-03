@@ -10,7 +10,7 @@ $(document).ready(function () {
 	function myFunction(x) {
 		if (x.matches) {
 			$("nav section").show();
-			
+
 		} else {
 			$(".cross").hide();
 			$("nav section").hide();
@@ -29,7 +29,7 @@ $(document).ready(function () {
 			});
 		}
 	}
-	
+
 	var x = window.matchMedia("(min-width: 1025px)");
 	myFunction(x);
 	x.addListener(myFunction);

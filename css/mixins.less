@@ -2,59 +2,62 @@
 
 /* Styles headings */
 .headingStyle(@paramColor: #000; @paramSize: 1em) {
-    color: @paramColor; // this accepts a font color passed through as an argument
-    font-size: @paramSize; // this accepts a font size passed through as an argument
-    font-weight: bold; // this is static code... not everything has to be dynamic!
-    line-height: @paramSize; // this reuses the same font size as before to change line height
-    margin-top: @paramSize / 2;
-    margin-bottom: @paramSize / 3;
-    text-transform: uppercase;
+	color: @paramColor; // this accepts a font color passed through as an argument
+	font-size: @paramSize; // this accepts a font size passed through as an argument
+	font-weight: bold; // this is static code... not everything has to be dynamic!
+	line-height: @paramSize; // this reuses the same font size as before to change line height
+	margin-top: @paramSize / 2;
+	margin-bottom: @paramSize / 3;
+	text-transform: uppercase;
 }
 
 /* Styles links */
 .linkStyle(@paramColor: #000; @paramColor2: #000; @paramColor3: #000) {
-    &:link {
-            color: @paramColor;
-    }
-    &:visited {
-            color: @paramColor2;
-    }
-    &:hover {
-            color: @paramColor3;
-    } 
+	&:link {
+		color: @paramColor;
+	}
+
+	&:visited {
+		color: @paramColor2;
+	}
+
+	&:hover {
+		color: @paramColor3;
+	}
 }
 
 /* Styles buttons */
 .buttonStyle(@paramColor: #FFF; @paramRadius: 5px) {
-    background-color: @paramColor;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: @paramRadius;
-    -moz-box-shadow: @paramRadius;
+	background-color: @paramColor;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: @paramRadius;
+	-moz-box-shadow: @paramRadius;
 	-webkit-box-shadow: @paramRadius;
 	-o-box-shadow: @paramRadius;
-    &:active {
-        box-shadow: 1px 1px 0px darken(@paramColor, 10%);
-        position: relative;
-        top: 2px;
-    }
-    
-    &:hover {
-        background-color: lighten(@paramColor, 50%);
-    }
+
+	&:active {
+		box-shadow: 1px 1px 0px darken(@paramColor, 10%);
+		position: relative;
+		top: 2px;
+	}
+
+	&:hover {
+		background-color: lighten(@paramColor, 50%);
+	}
 }
 
 /* Gives buttons a shadow */
 .buttonShadow(@paramX: 5px; @paramY: 5px; @paramColor: #AAA; @paramBlur: 5px) {
-    box-shadow: @paramX @paramY @paramColor @paramBlur;
-    -moz-box-shadow: @paramX @paramY @paramColor @paramBlur;
+	box-shadow: @paramX @paramY @paramColor @paramBlur;
+	-moz-box-shadow: @paramX @paramY @paramColor @paramBlur;
 	-webkit-box-shadow: @paramX @paramY @paramColor @paramBlur;
 	-o-box-shadow: @paramX @paramY @paramColor @paramBlur;
 }
 
 /* Gradient with two colors */
 .gradient(@paramAngle: left; @paramColor1: #CCC; @paramColor2: #AAA) {
-    background: -webkit-linear-gradient(@paramAngle, @paramColor1, @paramColor2);
+	background: -webkit-linear-gradient(@paramAngle, @paramColor1, @paramColor2);
 	background: -moz-linear-gradient(@paramAngle, @paramColor1, @paramColor2);
 	background: -o-linear-gradient(@paramAngle, @paramColor1, @paramColor2);
 	background: -ms-linear-gradient(@paramAngle, @paramColor1, @paramColor2);
@@ -63,109 +66,112 @@
 
 /* Turns button into clickable bar */
 .buttonBar(@paramColor: #FFF; @paramBorderColor: #000) {
-    background-color: @paramColor;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1em;
-    border: 1px solid @paramBorderColor;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    &:first-child {
-        border-top: none;
-        }
-    &:active {
-        position: relative;
-        top: 2px;
-    }
-    &:hover {
-        background-color: lighten(@paramColor, 50%);
-    }
+	background-color: @paramColor;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1em;
+	border: 1px solid @paramBorderColor;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+
+	&:first-child {
+		border-top: none;
+	}
+
+	&:active {
+		position: relative;
+		top: 2px;
+	}
+
+	&:hover {
+		background-color: lighten(@paramColor, 50%);
+	}
 }
 
 /* Styles copyright info */
 .copyright(@paramColor: #000) {
-    color: @paramColor;
-    font-size: .75em;
-    font-style: italic;
-    text-align: center;
-    padding: 0 8px 0 10px;
+	color: @paramColor;
+	font-size: .75em;
+	font-style: italic;
+	text-align: center;
+	padding: 0 8px 0 10px;
 }
 
 /* Styles page wrapper to 80% width of page */
 
 .wrapper(@paramColor: #FFF) {
-    background-color: @paramColor;
-    width:80%;
-    margin-right:auto;
-    margin-left:auto;
+	background-color: @paramColor;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* Drop shadow for text */
 .dropShadow(@paramColor1: #000; @paramColor2: #FFF) {
-    color: @paramColor1;
-    text-shadow: 3px 3px 4px @paramColor2;   
+	color: @paramColor1;
+	text-shadow: 3px 3px 4px @paramColor2;
 }
 
 /* Expands text */
 .expand() {
-   transform: scale(1.1);
-   display: inline-block;
+	transform: scale(1.1);
+	display: inline-block;
 }
 
 /* 65% Transparency */
 .transparent() {
-    opacity: 0.65;
+	opacity: 0.65;
 }
 
 /* Underlines and italicizes text */
 .underlineItalic() {
-    font-style: italic;
-    text-decoration: underline;
+	font-style: italic;
+	text-decoration: underline;
 }
 
 /* Bolds and all-caps text */
 .uppercaseBold() {
-    font-weight: bold;
-    text-transform: uppercase;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 /* Flips image */
 .flipImage() {
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
 }
 
 /* Impact font */
 .impact() {
-    font-family: 'Impact', sans-serif;
+	font-family: 'Impact', sans-serif;
 }
 
 /* Shadow for text */
 .shadow(@paramColor: #000) {
-    color: @paramColor;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);  
+	color: @paramColor;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Creates pointer cursor */
 .pointer() {
-    cursor: pointer;
-    transform: scale(1.1);
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
 /* Rounds borders */
 .rounded() {
-    border-radius: 8px;
+	border-radius: 8px;
 }
 
 /* Makes image black & white */
 .blackAndWhite() {
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 }

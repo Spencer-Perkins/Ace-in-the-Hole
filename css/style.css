@@ -59,7 +59,7 @@ header h2 {
 /* Nav */
 nav {
   background: #000000;
-  /* Hamburger menu. Z-index must be larger than in #navlinks for the script to work properly. */
+  /* Hamburger menu. Z-index must be larger than in #navlinks for the script to work properly.*/
   /* Nav link text inside the hamburger menu */
 }
 nav .hamburger,
@@ -98,8 +98,13 @@ nav section li a:hover {
 }
 /* Main */
 main {
+  /* Hides image gallery in tablet view */
   /* Hero images */
   /* Text placed over hero image */
+  /* Hides hero image in tablet view */
+  /* Forms */
+  /* FAQ page */
+  /* arrow icon down */
 }
 main b {
   font-weight: bold;
@@ -108,24 +113,24 @@ main section {
   padding: 1em 0;
   line-height: 1.5em;
 }
-main #galleryRow1,
-main #galleryRow2,
-main #galleryTitle {
+main #galleryTitle,
+main #container {
   display: none;
 }
 main .eventHero,
-main .faqHero,
-main .homeHero {
+main .faqHero {
   height: 7em;
 }
 main .eventHeroText,
-main .faqHeroText,
-main .homeHeroText {
+main .faqHeroText {
   font-family: 'Playfair Display', serif;
   font-size: 2em;
   color: #ff0000;
   line-height: 1.2em;
   text-align: center;
+}
+main .homeHero {
+  display: none;
 }
 main h2,
 main h3,
@@ -157,16 +162,15 @@ main h4 {
 main p {
   padding: .3em 1em 1em 1em;
 }
-/* Forms */
-#inquiryForm,
-.successP {
+main #inquiryForm,
+main .successP {
   background-color: #f5f5f5;
   padding: 1em;
   border-radius: 4px;
 }
-input,
-select,
-textarea {
+main input,
+main select,
+main textarea {
   width: 100%;
   box-sizing: border-box;
   padding: .4em;
@@ -174,29 +178,29 @@ textarea {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
 }
-select {
+main select {
   background-color: #ffffff;
   padding: .4em 0;
   cursor: pointer;
 }
-label,
-.successP {
+main label,
+main .successP {
   display: inline-block;
 }
-#mySubmit {
+main #mySubmit {
   background-color: #ff0000;
   color: #ffffff;
   border: none;
   font-size: .9em;
 }
-#mySubmit:active {
+main #mySubmit:active {
   position: relative;
   top: 2px;
 }
-table {
+main table {
   width: 100%;
 }
-th {
+main th {
   text-align: left;
   font-size: 1.2em;
   font-weight: bold;
@@ -204,40 +208,40 @@ th {
   background-color: #f5f5f5;
   color: #ff0000;
 }
-td {
+main td {
   padding: 1em 1em 1em .7em;
 }
-tr:nth-child(odd) {
+main tr:nth-child(odd) {
   background-color: #f5f5f5;
 }
-#satEvents,
-#sunEvents,
-#costIncl1,
-#costIncl2,
-#weather,
-#courseDetails,
-#about {
+main #satEvents,
+main #sunEvents,
+main #costIncl1,
+main #costIncl2,
+main #weather,
+main #courseDetails,
+main #about {
   padding: 0 0 1em 0;
 }
-#satEvents li,
-#sunEvents li,
-#costIncl1 li,
-#costIncl2 li,
-#weather li,
-#courseDetails li,
-#about li,
-#satEvents p,
-#sunEvents p,
-#costIncl1 p,
-#costIncl2 p,
-#weather p,
-#courseDetails p,
-#about p {
+main #satEvents li,
+main #sunEvents li,
+main #costIncl1 li,
+main #costIncl2 li,
+main #weather li,
+main #courseDetails li,
+main #about li,
+main #satEvents p,
+main #sunEvents p,
+main #costIncl1 p,
+main #costIncl2 p,
+main #weather p,
+main #courseDetails p,
+main #about p {
   padding: .2em .7em;
 }
-#courseDetails h4,
-#socialmedia1 h4,
-#socialmedia2 h4 {
+main #courseDetails h4,
+main #socialmedia1 h4,
+main #socialmedia2 h4 {
   color: #ff0000;
   font-size: 1.3em;
   font-family: 'Playfair Display', serif;
@@ -245,30 +249,30 @@ tr:nth-child(odd) {
   padding: .5em;
   background-color: #f5f5f5;
 }
-#courseDetails p,
-#socialmedia1 p,
-#socialmedia2 p {
+main #courseDetails p,
+main #socialmedia1 p,
+main #socialmedia2 p {
   padding-bottom: 1em;
 }
-#costIncl1 {
+main #costIncl1 {
   padding-bottom: 0;
 }
-#costIncl2 {
+main #costIncl2 {
   padding-top: 0;
 }
-#faq {
+main #faq {
   padding: 0;
 }
-#about p {
+main #about p {
   padding: .7em .7em .6em .7em;
 }
-#socialmedia1,
-#socialmedia2 {
+main #socialmedia1,
+main #socialmedia2 {
   padding-top: 0;
   padding-bottom: 0;
   overflow: hidden;
 }
-dt {
+main dt {
   cursor: pointer;
   font-size: 1.2em;
   background-color: #ff0000;
@@ -276,7 +280,7 @@ dt {
   padding: .5em .7em;
   /* arrow icon left */
 }
-dt:before {
+main dt:before {
   border: 0.5em solid;
   border-color: transparent transparent transparent #ffffff;
   content: '';
@@ -286,16 +290,15 @@ dt:before {
   width: 0;
   margin-right: .5em;
 }
-/* arrow icon down */
-.open {
+main .open {
   border-color: #ffffff transparent transparent transparent;
   border-bottom-width: 0;
 }
-.open:before {
+main .open:before {
   border-color: #ffffff transparent transparent transparent;
   border-bottom-width: 0;
 }
-dd {
+main dd {
   background-color: #f5f5f5;
   color: #000000;
   padding: 1em;
@@ -351,6 +354,11 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
     font-size: 1.6em;
   }
   /* Main */
+  main {
+    /* Hero images */
+    /* Hero text */
+    /* Image gallery */
+  }
   main .eventHero,
   main .faqHero,
   main .homeHero {
@@ -359,8 +367,7 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
     background-repeat: no-repeat;
   }
   main .eventHeroText,
-  main .faqHeroText,
-  main .homeHeroText {
+  main .faqHeroText {
     font-size: 2.5em;
     color: #ffffff;
     text-shadow: 3px 3px 4px #000000;
@@ -383,6 +390,7 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
     /* Image has been made opaque; full strength image is also in the image folder */
     background-image: url(../images/homehero.png);
     background-position: 50% 50%;
+    display: flex;
   }
   main section {
     padding: 1.2em;
@@ -393,24 +401,41 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
   main h4 {
     font-size: 1.3em;
   }
-  main #galleryRow1,
-  main #galleryRow2,
   main #galleryTitle {
     display: flex;
-  }
-  main #galleryRow1 img,
-  main #galleryRow2 img,
-  main #galleryTitle img {
-    padding: .2em .5em;
-  }
-  main #galleryRow1 {
-    padding: .5em;
-  }
-  main #galleryRow2 {
-    padding: .2em .5em;
-  }
-  main #galleryTitle {
     padding: 0;
+  }
+  main #container {
+    display: flex;
+    height: 25em;
+    padding: 0;
+  }
+  main .thumbnails {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  main .thumbnails li {
+    flex: auto;
+    padding: 0 .6em;
+  }
+  main .thumbnails a {
+    display: block;
+    padding-bottom: 0;
+  }
+  main .thumbnails img {
+    width: 40em;
+    height: auto;
+    overflow: scroll;
+  }
+  main .slides {
+    overflow: hidden;
+    padding: 0;
+  }
+  main .slides li {
+    height: auto;
+    margin: 0;
+    z-index: 2;
   }
   main #satEvents {
     padding-bottom: 0em;
@@ -484,11 +509,12 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
     display: none;
   }
   /* Main */
+  main {
+    /* Forms */
+    /* Image gallery */
+  }
   main section {
     padding: 1.5em 2em 1.5em 1.2em;
-  }
-  main #gallery {
-    padding: 2em;
   }
   main h3 {
     font-size: 1.7em;
@@ -547,6 +573,17 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
   }
   main #about p {
     padding: .7em 1em;
+  }
+  main #container {
+    height: 38em;
+    margin-right: 0;
+  }
+  main .slides li {
+    height: auto;
+  }
+  main .thumbnails img {
+    width: 45em;
+    height: auto;
   }
   /* Footer */
   footer {
