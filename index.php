@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<meta name="description" content="Ace in the Hole Multisport Events is an event company 
 									  that hosts multisport athletic events.">
-	<title>Ace in the Hole MultiSport Events</title>
+	<title>Ace in the Hole Multisport Events</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -60,12 +60,12 @@
 
 		<section id="container">
 			<ul class="slides">
-				<li id="slide1"><img src="images/biking1.jpg" alt="" /></li>
-				<li id="slide2"><img src="images/swimming1.jpg" alt="" /></li>
-				<li id="slide3"><img src="images/running1.png" alt="" /></li>
-				<li id="slide4"><img src="images/biking2.jpg" alt="" /></li>
-				<li id="slide5"><img src="images/swimming2.jpg" alt="" /></li>
-				<li id="slide6"><img src="images/running2.jpg" alt="" /></li>
+				<li id="slide1"><img src="images/biking1.jpg" alt="An image of bike riders during a race." /></li>
+				<li id="slide2"><img src="images/swimming1.jpg" alt="An image of swimmers in wetsuits in the water." /></li>
+				<li id="slide3"><img src="images/running1.png" alt="An image of runners during a race." /></li>
+				<li id="slide4"><img src="images/biking2.jpg" alt="A motion-blurred image of two bike riders during a race." /></li>
+				<li id="slide5"><img src="images/swimming2.jpg" alt="An image of swimmers in wetsuits running into the ocean." /></li>
+				<li id="slide6"><img src="images/running2.jpg" alt="An image of a group of runners during a race." /></li>
 			</ul>
 
 			<ul class="thumbnails">
